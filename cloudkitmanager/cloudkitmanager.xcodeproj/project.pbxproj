@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC1BE6FF2284684B00C6EFA1 /* cloudkitmanager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1BE6F52284684B00C6EFA1 /* cloudkitmanager.framework */; };
+		DC1BE6FF2284684B00C6EFA1 /* CloudKitManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1BE6F52284684B00C6EFA1 /* CloudKitManager.framework */; };
 		DC1BE7042284684C00C6EFA1 /* cloudkitmanagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BE7032284684C00C6EFA1 /* cloudkitmanagerTests.swift */; };
 		DC1BE7062284684C00C6EFA1 /* cloudkitmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1BE6F82284684B00C6EFA1 /* cloudkitmanager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCF3038A2284AD6200028B52 /* CKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF303892284AD6200028B52 /* CKManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +24,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DC1BE6F52284684B00C6EFA1 /* cloudkitmanager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = cloudkitmanager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC1BE6F52284684B00C6EFA1 /* CloudKitManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CloudKitManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1BE6F82284684B00C6EFA1 /* cloudkitmanager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cloudkitmanager.h; sourceTree = "<group>"; };
 		DC1BE6F92284684B00C6EFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC1BE6FE2284684B00C6EFA1 /* cloudkitmanagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cloudkitmanagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1BE7032284684C00C6EFA1 /* cloudkitmanagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cloudkitmanagerTests.swift; sourceTree = "<group>"; };
 		DC1BE7052284684C00C6EFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCF303892284AD6200028B52 /* CKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC1BE6FF2284684B00C6EFA1 /* cloudkitmanager.framework in Frameworks */,
+				DC1BE6FF2284684B00C6EFA1 /* CloudKitManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +64,7 @@
 		DC1BE6F62284684B00C6EFA1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DC1BE6F52284684B00C6EFA1 /* cloudkitmanager.framework */,
+				DC1BE6F52284684B00C6EFA1 /* CloudKitManager.framework */,
 				DC1BE6FE2284684B00C6EFA1 /* cloudkitmanagerTests.xctest */,
 			);
 			name = Products;
@@ -73,6 +75,7 @@
 			children = (
 				DC1BE6F82284684B00C6EFA1 /* cloudkitmanager.h */,
 				DC1BE6F92284684B00C6EFA1 /* Info.plist */,
+				DCF303892284AD6200028B52 /* CKManager.swift */,
 			);
 			path = cloudkitmanager;
 			sourceTree = "<group>";
@@ -115,7 +118,7 @@
 			);
 			name = cloudkitmanager;
 			productName = cloudkitmanager;
-			productReference = DC1BE6F52284684B00C6EFA1 /* cloudkitmanager.framework */;
+			productReference = DC1BE6F52284684B00C6EFA1 /* CloudKitManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DC1BE6FD2284684B00C6EFA1 /* cloudkitmanagerTests */ = {
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					DC1BE6F42284684B00C6EFA1 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					DC1BE6FD2284684B00C6EFA1 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF3038A2284AD6200028B52 /* CKManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 		DC1BE70A2284684C00C6EFA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,8 +362,9 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = academy.ifce.mateus.cloudkitmanager;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = CloudKitManager;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +373,7 @@
 		DC1BE70B2284684C00C6EFA1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -381,7 +389,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = academy.ifce.mateus.cloudkitmanager;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = CloudKitManager;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -391,6 +399,7 @@
 		DC1BE70D2284684C00C6EFA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2CU37X4Q76;
 				INFOPLIST_FILE = cloudkitmanagerTests/Info.plist;
@@ -409,6 +418,7 @@
 		DC1BE70E2284684C00C6EFA1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2CU37X4Q76;
 				INFOPLIST_FILE = cloudkitmanagerTests/Info.plist;
