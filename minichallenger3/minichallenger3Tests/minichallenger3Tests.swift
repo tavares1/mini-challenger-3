@@ -9,7 +9,7 @@
 import XCTest
 @testable import minichallenger3
 
-class minichallenger3Tests: XCTestCase {
+class MiniChallenger3Tests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

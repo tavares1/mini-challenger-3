@@ -30,12 +30,12 @@ opt_in_rules: # some rules are only opt-in
   - colon
   - comma
 included: # paths to include during linting. `--path` is ignored if present.
-  - Project
-  - ProjectTests
-  - ProjectUITests
+  - minichallenger3
+  - minichallenger3Tests
+  - minichallenger3UITests
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Pods
-  - Project/R.generated.swift
+  - minichallenger3/R.generated.swift
 
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level
