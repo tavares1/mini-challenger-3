@@ -9,12 +9,21 @@
 import Foundation
 import CloudKit
 
-class Advert {
+public class Advert {
 
     public private(set) var record: CKRecord
     
     public var id: CKRecord.ID? {
         return record.recordID
+    }
+    
+    public var owner: CKRecord.Reference {
+        set {
+            record["owner"] = newValue
+        }
+        get {
+            return record["owner"] as! CKRecord.Reference
+        }
     }
     
     public var type: AdType {
@@ -26,12 +35,12 @@ class Advert {
         }
     }
     
-    public var itemIdentifier: ItemIdentifier {
+    public var itemID: String {
         set {
-            record["itemIdentifier"] = newValue.string
+            record["itemID"] = newValue
         }
         get {
-            return ItemIdentifier(string: record["itemIdentifier"] as! String)
+            return record["itemID"] as! String
         }
     }
     
@@ -44,10 +53,11 @@ class Advert {
         }
     }
     
-    public init(type: AdType, itemIdentifier: ItemIdentifier, description: String) {
+    public init(owner: CKRecord.Reference, type: AdType, itemID: String, description: String) {
         record = CKRecord(recordType: "Advert")
+        self.owner = owner
         self.type = type
-        self.itemIdentifier = itemIdentifier
+        self.itemID = itemID
         self.description = description
     }
     

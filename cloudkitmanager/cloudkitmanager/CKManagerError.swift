@@ -14,6 +14,7 @@ enum CKManagerError: Error {
     case noAsset(record: CKRecord)
     case invalidFileURL(asset: CKAsset)
     case invalidData
+    case userWithoutID(user: User)
 }
 
 extension CKManagerError: LocalizedError {
@@ -27,6 +28,8 @@ extension CKManagerError: LocalizedError {
             return "Invalid fileURL for \(asset)."
         case .invalidData:
             return "Data is not a valid image data."
+        case .userWithoutID(let user):
+            return "\(user) has no CKRecord.ID"
         }
     }
 }
