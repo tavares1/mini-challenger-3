@@ -10,6 +10,11 @@
 		DC1BE6FF2284684B00C6EFA1 /* CloudKitManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1BE6F52284684B00C6EFA1 /* CloudKitManager.framework */; };
 		DC1BE7042284684C00C6EFA1 /* cloudkitmanagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BE7032284684C00C6EFA1 /* cloudkitmanagerTests.swift */; };
 		DC1BE7062284684C00C6EFA1 /* cloudkitmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1BE6F82284684B00C6EFA1 /* cloudkitmanager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCBA2BC92285B01F00299CBC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBA2BC82285B01F00299CBC /* User.swift */; };
+		DCBA2BCD2285B76A00299CBC /* Advert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBA2BCC2285B76A00299CBC /* Advert.swift */; };
+		DCBA2BD22285BE5B00299CBC /* AdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBA2BD12285BE5B00299CBC /* AdType.swift */; };
+		DCBA2BD42285BF7900299CBC /* ItemIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBA2BD32285BF7900299CBC /* ItemIdentifier.swift */; };
+		DCBA2BD62285C11D00299CBC /* DeliveryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBA2BD52285C11D00299CBC /* DeliveryPoint.swift */; };
 		DCF3038A2284AD6200028B52 /* CKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF303892284AD6200028B52 /* CKManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +35,11 @@
 		DC1BE6FE2284684B00C6EFA1 /* cloudkitmanagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cloudkitmanagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1BE7032284684C00C6EFA1 /* cloudkitmanagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cloudkitmanagerTests.swift; sourceTree = "<group>"; };
 		DC1BE7052284684C00C6EFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCBA2BC82285B01F00299CBC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DCBA2BCC2285B76A00299CBC /* Advert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advert.swift; sourceTree = "<group>"; };
+		DCBA2BD12285BE5B00299CBC /* AdType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdType.swift; sourceTree = "<group>"; };
+		DCBA2BD32285BF7900299CBC /* ItemIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemIdentifier.swift; sourceTree = "<group>"; };
+		DCBA2BD52285C11D00299CBC /* DeliveryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPoint.swift; sourceTree = "<group>"; };
 		DCF303892284AD6200028B52 /* CKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				DC1BE6F82284684B00C6EFA1 /* cloudkitmanager.h */,
+				DCBA2BD12285BE5B00299CBC /* AdType.swift */,
+				DCBA2BD32285BF7900299CBC /* ItemIdentifier.swift */,
+				DCBA2BC72285AFF300299CBC /* Records */,
 				DC1BE6F92284684B00C6EFA1 /* Info.plist */,
 				DCF303892284AD6200028B52 /* CKManager.swift */,
 			);
@@ -87,6 +100,16 @@
 				DC1BE7052284684C00C6EFA1 /* Info.plist */,
 			);
 			path = cloudkitmanagerTests;
+			sourceTree = "<group>";
+		};
+		DCBA2BC72285AFF300299CBC /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				DCBA2BC82285B01F00299CBC /* User.swift */,
+				DCBA2BCC2285B76A00299CBC /* Advert.swift */,
+				DCBA2BD52285C11D00299CBC /* DeliveryPoint.swift */,
+			);
+			path = Records;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCBA2BC92285B01F00299CBC /* User.swift in Sources */,
+				DCBA2BD42285BF7900299CBC /* ItemIdentifier.swift in Sources */,
 				DCF3038A2284AD6200028B52 /* CKManager.swift in Sources */,
+				DCBA2BD22285BE5B00299CBC /* AdType.swift in Sources */,
+				DCBA2BD62285C11D00299CBC /* DeliveryPoint.swift in Sources */,
+				DCBA2BCD2285B76A00299CBC /* Advert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
