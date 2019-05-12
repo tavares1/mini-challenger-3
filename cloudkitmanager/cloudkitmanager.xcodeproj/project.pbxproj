@@ -11,6 +11,8 @@
 		DC1BE7042284684C00C6EFA1 /* cloudkitmanagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BE7032284684C00C6EFA1 /* cloudkitmanagerTests.swift */; };
 		DC1BE7062284684C00C6EFA1 /* cloudkitmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1BE6F82284684B00C6EFA1 /* cloudkitmanager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC93964E2288591D00891009 /* CKManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC93964D2288591D00891009 /* CKManagerError.swift */; };
+		DC9396502288A0EF00891009 /* CKManager+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC93964F2288A0EF00891009 /* CKManager+User.swift */; };
+		DC9396522288A20500891009 /* CKManager+DeliveryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9396512288A20500891009 /* CKManager+DeliveryPoint.swift */; };
 		DCBA2BC92285B01F00299CBC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBA2BC82285B01F00299CBC /* User.swift */; };
 		DCBA2BCD2285B76A00299CBC /* Advert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBA2BCC2285B76A00299CBC /* Advert.swift */; };
 		DCBA2BD22285BE5B00299CBC /* AdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBA2BD12285BE5B00299CBC /* AdType.swift */; };
@@ -37,6 +39,8 @@
 		DC1BE7032284684C00C6EFA1 /* cloudkitmanagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cloudkitmanagerTests.swift; sourceTree = "<group>"; };
 		DC1BE7052284684C00C6EFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC93964D2288591D00891009 /* CKManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKManagerError.swift; sourceTree = "<group>"; };
+		DC93964F2288A0EF00891009 /* CKManager+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKManager+User.swift"; sourceTree = "<group>"; };
+		DC9396512288A20500891009 /* CKManager+DeliveryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKManager+DeliveryPoint.swift"; sourceTree = "<group>"; };
 		DCBA2BC82285B01F00299CBC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DCBA2BCC2285B76A00299CBC /* Advert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advert.swift; sourceTree = "<group>"; };
 		DCBA2BD12285BE5B00299CBC /* AdType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdType.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				DCBA2BC72285AFF300299CBC /* Records */,
 				DC1BE6F92284684B00C6EFA1 /* Info.plist */,
 				DCF303892284AD6200028B52 /* CKManager.swift */,
+				DC93964F2288A0EF00891009 /* CKManager+User.swift */,
+				DC9396512288A20500891009 /* CKManager+DeliveryPoint.swift */,
 				DC93964D2288591D00891009 /* CKManagerError.swift */,
 			);
 			path = cloudkitmanager;
@@ -248,10 +254,12 @@
 			files = (
 				DCBA2BC92285B01F00299CBC /* User.swift in Sources */,
 				DC93964E2288591D00891009 /* CKManagerError.swift in Sources */,
+				DC9396502288A0EF00891009 /* CKManager+User.swift in Sources */,
 				DCBA2BD42285BF7900299CBC /* ItemIdentifier.swift in Sources */,
 				DCF3038A2284AD6200028B52 /* CKManager.swift in Sources */,
 				DCBA2BD22285BE5B00299CBC /* AdType.swift in Sources */,
 				DCBA2BD62285C11D00299CBC /* DeliveryPoint.swift in Sources */,
+				DC9396522288A20500891009 /* CKManager+DeliveryPoint.swift in Sources */,
 				DCBA2BCD2285B76A00299CBC /* Advert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
