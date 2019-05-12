@@ -27,7 +27,7 @@ public final class CKManager {
     func iCloudUserID(completion: @escaping (Result<String, Error>) -> Void) {
         container.fetchUserRecordID { recordID, error in
             guard let recordID = recordID else {
-                completion(.failure(error ?? NSError()))
+                completion(.failure(error ?? CKManagerError.unknown))
                 return
             }
             completion(.success(recordID.recordName))
@@ -37,7 +37,7 @@ public final class CKManager {
     public func save(_ user: User, completion: @escaping (Result<CKRecord, Error>) -> Void) {
         publicDatabase.save(user.record) { (record, error) in
             guard let record = record else {
-                completion(.failure(error ?? NSError()))
+                completion(.failure(error ?? CKManagerError.unknown))
                 return
             }
             completion(.success(record))
@@ -48,7 +48,7 @@ public final class CKManager {
         let query = CKQuery(recordType: "User", predicate: NSPredicate(value: true))
         publicDatabase.perform(query, inZoneWith: nil) { (records, error) in
             guard let records = records else {
-                completion(.failure(error ?? NSError()))
+                completion(.failure(error ?? CKManagerError.unknown))
                 return
             }
             let users = records.map({ (record) -> User in
@@ -63,7 +63,7 @@ public final class CKManager {
         let query = CKQuery(recordType: "User", predicate: predicate)
         publicDatabase.perform(query, inZoneWith: nil) { (records, error) in
             guard let record = records?.first else {
-                completion(.failure(error ?? NSError()))
+                completion(.failure(error ?? CKManagerError.unknown))
                 return
             }
             let user = User(record: record)
@@ -80,7 +80,7 @@ public final class CKManager {
                 record["asset"] = CKAsset(fileURL: url)
                 publicDatabase.save(record) { (record, error) in
                     guard let record = record else {
-                        completion(.failure(error ?? NSError()))
+                        completion(.failure(error ?? CKManagerError.unknown))
                         return
                     }
                     completion(.success(record))
@@ -96,16 +96,22 @@ public final class CKManager {
         publicDatabase.fetch(withRecordID: reference.recordID) { (record, error) in
             var image: UIImage?
             guard let record = record else {
-                completion(.failure(error ?? NSError()))
+                completion(.failure(error ?? CKManagerError.unknown))
                 return
             }
-            if let asset = record["asset"] as? CKAsset, let fileURL = asset.fileURL {
-                do {
-                    let data = try Data(contentsOf: fileURL)
-                    image = UIImage(data: data)!
-                } catch {
-                    completion(.failure(error))
-                }
+            guard let asset = record["asset"] as? CKAsset else {
+                completion(.failure(CKManagerError.noAsset(record: record)))
+                return
+            }
+            guard let fileURL = asset.fileURL else {
+                completion(.failure(CKManagerError.invalidFileURL(asset: asset)))
+                return
+            }
+            do {
+                let data = try Data(contentsOf: fileURL)
+                image = UIImage(data: data)
+            } catch {
+                completion(.failure(error))
             }
             completion(.success(image))
         }
