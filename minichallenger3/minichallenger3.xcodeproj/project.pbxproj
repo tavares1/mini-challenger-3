@@ -14,6 +14,7 @@
 		AE43B0BF22845193003B06BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE43B0BD22845193003B06BA /* LaunchScreen.storyboard */; };
 		AE43B0CA22845193003B06BA /* minichallenger3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43B0C922845193003B06BA /* minichallenger3Tests.swift */; };
 		AE43B0D522845193003B06BA /* minichallenger3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43B0D422845193003B06BA /* minichallenger3UITests.swift */; };
+		DA9AFB2522899E92000E58B3 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9AFB2422899E92000E58B3 /* ViewCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		AE43B0D022845193003B06BA /* minichallenger3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = minichallenger3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE43B0D422845193003B06BA /* minichallenger3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minichallenger3UITests.swift; sourceTree = "<group>"; };
 		AE43B0D622845193003B06BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA9AFB2422899E92000E58B3 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		AE43B0B322845191003B06BA /* minichallenger3 */ = {
 			isa = PBXGroup;
 			children = (
+				DA9AFB2322899E77000E58B3 /* Protocols */,
 				AE43B0B422845191003B06BA /* AppDelegate.swift */,
 				AE43B0B622845191003B06BA /* ViewController.swift */,
 				AE43B0B822845191003B06BA /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				AE43B0D622845193003B06BA /* Info.plist */,
 			);
 			path = minichallenger3UITests;
+			sourceTree = "<group>";
+		};
+		DA9AFB2322899E77000E58B3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DA9AFB2422899E92000E58B3 /* ViewCode.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +291,7 @@
 			files = (
 				AE43B0B722845191003B06BA /* ViewController.swift in Sources */,
 				AE43B0B522845191003B06BA /* AppDelegate.swift in Sources */,
+				DA9AFB2522899E92000E58B3 /* ViewCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
