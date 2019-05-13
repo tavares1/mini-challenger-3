@@ -1,18 +1,18 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  minichallenger3
 //
-//  Created by Guimbo on 09/05/19.
+//  Created by Lucas Tavares on 13/05/19.
 //  Copyright © 2019 Guimbo. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .purple
     }
 
 }
